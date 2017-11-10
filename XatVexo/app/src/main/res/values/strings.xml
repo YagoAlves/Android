@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">XatVeco</string>
+    <string name="userNameHint"> Usuário</string>
+    <string name="passwordHint">Senha</string>
+    <string name="buttonLogin"> LOGIN</string>
+    <string name="title_activity_tela_conversas">XatVeco</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_tela_cadastrar">TelaCadastrar</string>
+    <string name="title_activity_tela_perfil">Perfil</string>
+    <string name="title_activity_tela_mapa">Mapa</string>
+</resources>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hduar.xatvexo"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-library android:name="com.google.android.maps" />
+
+    <permission android:protectionLevel="signature"
+        android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <permission android:protectionLevel="signature"
+        android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission android:protectionLevel="signature"
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <permission android:protectionLevel="signature"
+        android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <permission android:protectionLevel="signature"
+        android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <permission android:protectionLevel="signature"
+        android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- Splash screen -->
+        <activity
+            android:name=".TelaSplash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity Principal -->
+        <activity
+            android:name=".TelaLogin"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".TelaCadastrar"
+            android:label="@string/title_activity_tela_cadastrar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TelaPrincipal"
+            android:label="@string/title_activity_tela_conversas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TelaMapa"
+            android:label="@string/title_activity_tela_mapa"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TelaPerfil"
+            android:label="@string/title_activity_tela_perfil"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".TelaFoto"
+            android:label="Foto"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".TelaChat"
+            android:label="Chat"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".CadastrarLocal"
+            android:label="Novo Local"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".TelaLocalizacao"
+            android:label="Localização"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:label="ServiceGPS"
+            android:name=".Services.ServiceGPS"
+            android:exported="false"/>
+
+        <service
+            android:label="ServiceLocais"
+            android:name=".Services.ServiceLocais"
+            android:exported="false"/>
+
+        <receiver android:name=".Services.BroadcastOnline">
+            <intent-filter>
+                <action android:name="Online"></action>
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+
+
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+    </application>
+
+</manifest>
